@@ -9,6 +9,7 @@ class Person
     if person.is_a?(Person)
       self.partner = person
       person.partner = self
+      "#{self.name} is married to #{person.name} "
     else
       begin
         raise PartnerError
@@ -26,7 +27,8 @@ class Person
 end
 
 beyonce = Person.new("Beyonce")
-beyonce.get_married("Jay-Z")
+jayz = Person.new("Jazy-Z")
+puts beyonce.get_married(jayz)
 puts beyonce.name
 
 
